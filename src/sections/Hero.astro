@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import xbiz from '../assets/images/xbiz-badge.png';
+import heroMobile from '../assets/images/hero-image-mobile.jpg';
+import HeroCallouts from '../components/HeroCallouts.astro';
+---
+
+<section>
+	<div
+		class="mx-auto flex w-full max-w-[1440px] bg-cover bg-center bg-no-repeat px-2 md:min-h-[847px] md:bg-hero-desktop"
+	>
+		<div class="mx-auto grid max-w-screen-xl md:grid-cols-2 md:self-stretch">
+			<div
+				class="mx-auto mt-8 flex flex-col items-baseline justify-center text-center md:mt-0 md:text-left"
+			>
+				<span class="w-full text-center text-xl uppercase text-primary sm:text-2xl md:text-left"
+					>The World's First Frotting Toy</span
+				>
+				<h1 class="flex flex-col text-4xl font-bold sm:text-7xl">
+					Meet CockBlock®<span class="text-balance font-normal">A hot new way to have sex</span>
+				</h1>
+				<div class="hidden md:block">
+					<HeroCallouts />
+					<a href="#watch" class="btn btn-primary btn-lg mt-14">Watch How It Works</a>
+				</div>
+			</div>
+			<div class="relative hidden w-full md:block">
+				<Image class="absolute right-0 top-0" src={xbiz} alt="xbiz award badge" />
+			</div>
+		</div>
+	</div>
+	<Image class="mt-8 md:hidden" src={heroMobile} alt="CockBlock frot toy a sex toy for gay men" />
+	<div class="px-2 md:hidden">
+		<HeroCallouts />
+		<a href="#watch" class="btn btn-primary btn-lg mt-14">Watch How It Works</a>
+	</div>
+</section>
